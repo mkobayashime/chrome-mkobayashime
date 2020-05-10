@@ -7,4 +7,15 @@ window.onload = () => {
       closeBtn.click()
     }
   }
+
+  window.onkeypress = (e) => {
+    if (e.ctrlKey && e.code === "Enter") {
+      const curUrl = window.location.href
+      const partId = curUrl.substr(curUrl.indexOf("partId") + 7)
+      window.open(
+        `https://anime.dmkt-sp.jp/animestore/sc_d_pc?partId=${partId}`,
+        "newtab"
+      )
+    }
+  }
 }
