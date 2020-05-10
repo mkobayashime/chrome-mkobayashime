@@ -26,6 +26,15 @@
       "js": [
         "tweetdeck.js"
       ]
+    },
+    {
+      "matches": [
+        "https://anime.dmkt-sp.jp/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "dAnime.js"
+      ]
     }
   ]
 }

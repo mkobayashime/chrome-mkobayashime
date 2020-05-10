@@ -8,7 +8,8 @@ const PATHS = require('./paths');
 // Merge webpack configuration files
 const config = merge(common, {
   entry: {
-    contentScript: PATHS.src + '/contentScript.js',
+    tweetdeck: PATHS.src + '/tweetdeck.js',
+    dAnime: PATHS.src + '/dAnime.js',
     background: PATHS.src + '/background.js',
   },
 });
