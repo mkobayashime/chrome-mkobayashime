@@ -10,6 +10,7 @@ const config = merge(common, {
   entry: {
     tweetdeck: PATHS.src + '/tweetdeck.js',
     dAnime: PATHS.src + '/dAnime.js',
+    manaba: PATHS.src + '/manaba.js',
     background: PATHS.src + '/background.js',
   },
 });
