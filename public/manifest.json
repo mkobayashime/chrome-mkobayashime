@@ -22,7 +22,7 @@
       "matches": [
         "https://tweetdeck.twitter.com/"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "js": [
         "tweetdeck.js"
       ]
@@ -31,7 +31,7 @@
       "matches": [
         "https://anime.dmkt-sp.jp/*"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "js": [
         "dAnime.js"
       ]
@@ -40,7 +40,7 @@
       "matches": [
         "https://manaba.tsukuba.ac.jp/*"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "js": [
         "manaba.js"
       ]
