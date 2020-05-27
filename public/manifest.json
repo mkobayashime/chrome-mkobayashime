@@ -44,6 +44,15 @@
       "js": [
         "manaba.js"
       ]
+    },
+    {
+      "matches": [
+        "https://www.tulips.tsukuba.ac.jp/search/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "tulips.js"
+      ]
     }
   ]
 }

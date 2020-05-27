@@ -11,6 +11,7 @@ const config = merge(common, {
     tweetdeck: PATHS.src + '/tweetdeck.js',
     dAnime: PATHS.src + '/dAnime.js',
     manaba: PATHS.src + '/manaba.js',
+    tulips: PATHS.src + '/tulips.js',
     background: PATHS.src + '/background.js',
   },
 });
