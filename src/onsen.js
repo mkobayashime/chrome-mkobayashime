@@ -9,7 +9,7 @@ window.onload = () => {
       aTag.style.height = "100%"
       aTag.style.top = "0"
       aTag.style.left = "0"
-  
+
       btn.appendChild(aTag)
     }
   }
@@ -35,8 +35,7 @@ window.onload = () => {
     })
     observer.observe(listWrapper, {
       childList: true,
-      attributes: true
+      attributes: true,
     })
   })
-
 }

@@ -6,7 +6,7 @@ window.onload = () => {
     createATag()
   })
   observer.observe(resultsWrapper, {
-    childList: true
+    childList: true,
   })
 
   const createATag = () => {
@@ -23,14 +23,14 @@ window.onload = () => {
     promise.then((rows) => {
       for (const row of rows) {
         row.style.position = "relative"
-    
+
         const aTag = document.createElement("a")
         aTag.style.position = "absolute"
         aTag.style.width = "100%"
         aTag.style.height = "100%"
         aTag.style.top = "0"
         aTag.style.left = "0"
-    
+
         row.appendChild(aTag)
       }
     })
