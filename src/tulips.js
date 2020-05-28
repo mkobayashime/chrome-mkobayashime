@@ -13,7 +13,6 @@ window.onload = () => {
     const promise = new Promise((resoleve) => {
       const interval = window.setInterval(() => {
         const rows = document.getElementsByClassName("article")
-        console.log(rows)
         if (rows.length) {
           window.clearInterval(interval)
           resoleve(rows)
