@@ -17,12 +17,12 @@ window.onload = () => {
   const btnSort = document.getElementsByClassName("btnSort")
   createATag(btnSort)
 
-  const promise = new Promise((resoleve) => {
+  const promise = new Promise((resolve) => {
     const interval = window.setInterval(() => {
       const listWrapper = document.querySelector(".listWrap .clr")
       if (listWrapper) {
         window.clearInterval(interval)
-        resoleve(listWrapper)
+        resolve(listWrapper)
       }
     }, 250)
   })
