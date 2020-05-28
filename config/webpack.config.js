@@ -12,6 +12,7 @@ const config = merge(common, {
     dAnime: PATHS.src + '/dAnime.js',
     manaba: PATHS.src + '/manaba.js',
     tulips: PATHS.src + '/tulips.js',
+    onsen: PATHS.src + '/onsen.js',
     background: PATHS.src + '/background.js',
   },
 });

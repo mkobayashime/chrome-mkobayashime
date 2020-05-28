@@ -53,6 +53,15 @@
       "js": [
         "tulips.js"
       ]
+    },
+    {
+      "matches": [
+        "http://www.onsen.ag/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "onsen.js"
+      ]
     }
   ]
 }
