@@ -20,6 +20,15 @@
   "content_scripts": [
     {
       "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "quickTazugane.js"
+      ]
+    },
+    {
+      "matches": [
         "https://tweetdeck.twitter.com/"
       ],
       "run_at": "document_end",
@@ -63,5 +72,8 @@
         "onsen.js"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "style/tazugane.css"
   ]
 }
