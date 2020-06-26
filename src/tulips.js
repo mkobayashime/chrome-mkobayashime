@@ -29,4 +29,10 @@ const addFilterOpenArticles = () => {
   filterBtn.addEventListener("click", () => {
     filter()
   })
+
+  window.onkeyup = (e) => {
+    if (e.altKey && e.code === "KeyO") {
+      filter()
+    }
+  }
 }
