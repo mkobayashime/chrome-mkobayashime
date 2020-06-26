@@ -1,38 +1,32 @@
 "use strict"
 
 window.onload = () => {
-  const resultsWrapper = document.getElementsByClassName("results")[0]
-  const observer = new MutationObserver(() => {
-    createATag()
-  })
-  observer.observe(resultsWrapper, {
-    childList: true,
-  })
+  addFilterOpenArticles()
+}
 
-  const createATag = () => {
-    const promise = new Promise((resoleve) => {
-      const interval = window.setInterval(() => {
-        const rows = document.getElementsByClassName("article")
-        if (rows.length) {
-          window.clearInterval(interval)
-          resoleve(rows)
-        }
-      }, 250)
-    })
+const addFilterOpenArticles = () => {
+  const journalBtn = document.getElementsByClassName("journalbutton")[0]
+  const filterBtn = document.createElement("a")
+  filterBtn.innerHTML = "オープンのみ表示"
+  filterBtn.style.fontSize = "1.2rem"
+  filterBtn.style.marginRight = "2rem"
+  journalBtn.insertBefore(filterBtn, journalBtn.firstChild)
 
-    promise.then((rows) => {
-      for (const row of rows) {
-        row.style.position = "relative"
+  const filter = () => {
+    const resultsWrapper = document.getElementsByClassName("results")[0]
+    const results = Array.from(resultsWrapper.childNodes)
+    results.shift()
+    results.pop()
 
-        const aTag = document.createElement("a")
-        aTag.style.position = "absolute"
-        aTag.style.width = "100%"
-        aTag.style.height = "100%"
-        aTag.style.top = "0"
-        aTag.style.left = "0"
-
-        row.appendChild(aTag)
+    for (const row of results) {
+      const holdings = row.childNodes[3].innerText
+      if (!holdings.includes("オープン")) {
+        row.style.display = "none"
       }
-    })
+    }
   }
+
+  filterBtn.addEventListener("click", () => {
+    filter()
+  })
 }
