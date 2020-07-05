@@ -14,6 +14,7 @@ const config = merge(common, {
     manaba: PATHS.src + "/manaba.js",
     tulips: PATHS.src + "/tulips.js",
     onsen: PATHS.src + "/onsen.js",
+    twins: PATHS.src + "/twins.js",
     background: PATHS.src + "/background.js",
   },
 })

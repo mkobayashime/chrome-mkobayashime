@@ -71,6 +71,15 @@
       "js": [
         "onsen.js"
       ]
+    },
+    {
+      "matches": [
+        "https://twins.tsukuba.ac.jp/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "twins.js"
+      ]
     }
   ],
   "web_accessible_resources": [
