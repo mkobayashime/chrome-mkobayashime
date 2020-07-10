@@ -5,13 +5,6 @@ window.onload = () => {
 }
 
 const addFilterOpenArticles = () => {
-  const journalBtn = document.getElementsByClassName("journalbutton")[0]
-  const filterBtn = document.createElement("a")
-  filterBtn.innerHTML = "オープンのみ表示"
-  filterBtn.style.fontSize = "1.2rem"
-  filterBtn.style.marginRight = "2rem"
-  journalBtn.insertBefore(filterBtn, journalBtn.firstChild)
-
   const filter = () => {
     const resultsWrapper = document.getElementsByClassName("results")[0]
     const results = Array.from(resultsWrapper.childNodes)
@@ -25,10 +18,6 @@ const addFilterOpenArticles = () => {
       }
     }
   }
-
-  filterBtn.addEventListener("click", () => {
-    filter()
-  })
 
   window.onkeyup = (e) => {
     if (e.altKey && e.code === "KeyO") {
