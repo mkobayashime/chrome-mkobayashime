@@ -24,9 +24,23 @@ window.onload = () => {
     }
 
     if (e.code === "Enter") {
-      const ansBtnImg = document.querySelector("img[alt='正解と解説']")
-      if (ansBtnImg) {
-        ansBtnImg.parentElement.click()
+      const btnTrue = document.getElementsByClassName("btn_true")[0]
+      const btnFalse = document.getElementsByClassName("btn_false")[0]
+
+      if (btnTrue && btnFalse) {
+        const btnTrueStatus = btnTrue.childNodes[0].className.includes(
+          "selected"
+        )
+        const btnFalseStatus = btnFalse.childNodes[0].className.includes(
+          "selected"
+        )
+
+        if (btnTrueStatus || btnFalseStatus) {
+          const ansBtnImg = document.querySelector("img[alt='正解と解説']")
+          if (ansBtnImg) {
+            ansBtnImg.parentElement.click()
+          }
+        }
       }
 
       const nextBtnImg = document.querySelector("img[alt='次の問題']")
