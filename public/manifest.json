@@ -80,6 +80,15 @@
       "js": [
         "twins.js"
       ]
+    },
+    {
+      "matches": [
+        "https://www.musasi.jp/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "musasi.js"
+      ]
     }
   ],
   "web_accessible_resources": [
