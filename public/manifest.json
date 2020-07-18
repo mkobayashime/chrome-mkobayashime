@@ -9,13 +9,16 @@
   },
   "background": {
     "scripts": [
-      "background.js"
+      "disableForceDownload.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "permissions": [
+    "<all_urls>",
     "storage",
-    "tabs"
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "content_scripts": [
     {
