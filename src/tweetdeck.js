@@ -1,10 +1,8 @@
 "use strict"
 
-chrome.runtime.onMessage.addListener((message) => {
-  if (message.type === "updated") {
-    main()
-  }
-})
+window.onload = () => {
+  main()
+}
 
 const main = () => {
   window.addEventListener("beforeunload", (event) => {
