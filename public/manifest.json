@@ -68,15 +68,6 @@
     },
     {
       "matches": [
-        "http://www.onsen.ag/*"
-      ],
-      "run_at": "document_end",
-      "js": [
-        "onsen.js"
-      ]
-    },
-    {
-      "matches": [
         "https://twins.tsukuba.ac.jp/*"
       ],
       "run_at": "document_end",

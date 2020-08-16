@@ -13,7 +13,6 @@ const config = merge(common, {
     dAnime: PATHS.src + "/dAnime.js",
     manaba: PATHS.src + "/manaba.js",
     tulips: PATHS.src + "/tulips.js",
-    onsen: PATHS.src + "/onsen.js",
     twins: PATHS.src + "/twins.js",
     musasi: PATHS.src + "/musasi.js",
     niconico: PATHS.src + "/niconico.js",
