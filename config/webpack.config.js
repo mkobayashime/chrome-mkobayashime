@@ -16,6 +16,7 @@ const config = merge(common, {
     onsen: PATHS.src + "/onsen.js",
     twins: PATHS.src + "/twins.js",
     musasi: PATHS.src + "/musasi.js",
+    niconico: PATHS.src + "/niconico.js",
     disableForceDownload: PATHS.src + "/disableForceDownload.js",
   },
 })

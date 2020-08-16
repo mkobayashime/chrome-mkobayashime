@@ -92,6 +92,15 @@
       "js": [
         "musasi.js"
       ]
+    },
+    {
+      "matches": [
+        "https://www.nicovideo.jp/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "niconico.js"
+      ]
     }
   ],
   "web_accessible_resources": [
