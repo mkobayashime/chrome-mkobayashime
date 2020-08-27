@@ -14,7 +14,6 @@ const config = merge(common, {
     manaba: PATHS.src + "/manaba.js",
     tulips: PATHS.src + "/tulips.js",
     twins: PATHS.src + "/twins.js",
-    musasi: PATHS.src + "/musasi.js",
     niconico: PATHS.src + "/niconico.js",
     disableForceDownload: PATHS.src + "/disableForceDownload.js",
   },
