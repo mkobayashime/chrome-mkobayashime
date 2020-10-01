@@ -83,6 +83,15 @@
       "js": [
         "niconico.js"
       ]
+    },
+    {
+      "matches": [
+        "https://app.getmoneytree.com/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "moneytree.js"
+      ]
     }
   ],
   "web_accessible_resources": [

@@ -15,6 +15,7 @@ const config = merge(common, {
     tulips: PATHS.src + "/tulips.js",
     twins: PATHS.src + "/twins.js",
     niconico: PATHS.src + "/niconico.js",
+    moneytree: PATHS.src + "/moneytree.js",
     disableForceDownload: PATHS.src + "/disableForceDownload.js",
   },
 })
