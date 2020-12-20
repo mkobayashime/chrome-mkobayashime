@@ -86,6 +86,15 @@
       "js": [
         "moneytree.js"
       ]
+    },
+    {
+      "matches": [
+        "https://www.kurashiru.com/recipes/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "kurashiru.js"
+      ]
     }
   ],
   "web_accessible_resources": [

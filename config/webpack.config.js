@@ -16,6 +16,7 @@ const config = merge(common, {
     twins: PATHS.src + "/twins.js",
     niconico: PATHS.src + "/niconico.js",
     moneytree: PATHS.src + "/moneytree.js",
+    kurashiru: PATHS.src + "/kurashiru.js",
   },
 })
 
