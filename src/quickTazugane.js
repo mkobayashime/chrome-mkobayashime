@@ -6,7 +6,7 @@ window.onload = () => {
       const styleTag = document.createElement("link")
       styleTag.rel = "stylesheet"
       styleTag.type = "text/css"
-      styleTag.href = chrome.extension.getURL("/style/tazugane.css")
+      styleTag.href = chrome.runtime.getURL("/style/tazugane.css")
 
       document.head.appendChild(styleTag)
     }
