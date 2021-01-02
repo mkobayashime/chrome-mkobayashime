@@ -11,6 +11,6 @@ const onHeadersReceived = (details) => {
 
 chrome.webRequest.onHeadersReceived.addListener(
   onHeadersReceived,
-  { urls: ["<all_urls>"] },
+  { urls: ["https://manaba.tsukuba.ac.jp/*"] },
   ["blocking", "responseHeaders"]
 )
