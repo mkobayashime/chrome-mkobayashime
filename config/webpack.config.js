@@ -17,6 +17,7 @@ const config = merge(common, {
     niconico: PATHS.src + "/niconico.js",
     moneytree: PATHS.src + "/moneytree.js",
     kurashiru: PATHS.src + "/kurashiru.js",
+    disableForceDownload: PATHS.src + "/disableForceDownload.js",
   },
 })
 

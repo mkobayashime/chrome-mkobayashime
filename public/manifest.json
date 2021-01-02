@@ -7,6 +7,12 @@
     "16": "icons/icon_16.png",
     "128": "icons/icon_128.png"
   },
+  "background": {
+    "scripts": [
+      "disableForceDownload.js"
+    ],
+    "persistent": true
+  },
   "permissions": [
   ],
   "content_scripts": [
