@@ -2,14 +2,11 @@
 
 const url = window.location.href
 
-const projectSettingsPattern = new RegExp(
-  "https://scrapbox.io/projects/[^/]+/settings/"
+const settingPagesPattern = new RegExp(
+  "https://scrapbox.io/(projects/[^/]+/)?settings/"
 )
 
-if (
-  !url.includes("scrapbox.io/settings/profile") ||
-  !projectSettingsPattern.test(url)
-) {
+if (!settingPagesPattern.test(url)) {
   const projectId = window.location.href.match(
     RegExp("^https://scrapbox.io/(?<projectId>.*)/.*$")
   ).groups.projectId
