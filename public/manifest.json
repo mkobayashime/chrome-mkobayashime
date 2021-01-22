@@ -108,6 +108,15 @@
       "js": [
         "scrapbox.js"
       ]
+    },
+    {
+      "matches": [
+        "https://app.slack.com/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "slack.js"
+      ]
     }
   ],
   "web_accessible_resources": [
