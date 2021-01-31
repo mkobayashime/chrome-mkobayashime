@@ -1,11 +1,9 @@
 "use strict"
 
-window.onload = () => {
-  const url = window.location.href
+const url = window.location.href
 
-  if (url.indexOf("&tabId=kj") === url.length - 9) {
-    setKeijiShortcuts()
-  }
+if (url.indexOf("&tabId=kj") === url.length - 9) {
+  setKeijiShortcuts()
 }
 
 const setKeijiShortcuts = () => {

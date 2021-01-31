@@ -1,14 +1,12 @@
 "use strict"
 
-window.onload = () => {
-  document.onkeyup = (e) => {
-    if (e.altKey && e.key === "k") {
-      const styleTag = document.createElement("link")
-      styleTag.rel = "stylesheet"
-      styleTag.type = "text/css"
-      styleTag.href = chrome.runtime.getURL("/style/tazugane.css")
+document.onkeyup = (e) => {
+  if (e.altKey && e.key === "k") {
+    const styleTag = document.createElement("link")
+    styleTag.rel = "stylesheet"
+    styleTag.type = "text/css"
+    styleTag.href = chrome.runtime.getURL("/style/tazugane.css")
 
-      document.head.appendChild(styleTag)
-    }
+    document.head.appendChild(styleTag)
   }
 }
