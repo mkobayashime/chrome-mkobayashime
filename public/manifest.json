@@ -8,118 +8,66 @@
     "128": "icons/icon_128.png"
   },
   "background": {
-    "scripts": [
-      "disableForceDownload.js"
-    ],
+    "scripts": ["disableForceDownload.js"],
     "persistent": true
   },
-  "permissions": [
-    "<all_urls>",
-    "webRequest",
-    "webRequestBlocking"
-  ],
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "run_at": "document_end",
-      "js": [
-        "quickTazugane.js"
-      ]
+      "js": ["quickTazugane.js"]
     },
     {
-      "matches": [
-        "https://tweetdeck.twitter.com/"
-      ],
+      "matches": ["https://tweetdeck.twitter.com/"],
       "run_at": "document_end",
-      "js": [
-        "tweetdeck.js"
-      ]
+      "js": ["tweetdeck.js"]
     },
     {
-      "matches": [
-        "https://anime.dmkt-sp.jp/*"
-      ],
+      "matches": ["https://anime.dmkt-sp.jp/*"],
       "run_at": "document_end",
-      "js": [
-        "dAnime.js"
-      ]
+      "js": ["dAnime.js"]
     },
     {
-      "matches": [
-        "https://manaba.tsukuba.ac.jp/*"
-      ],
+      "matches": ["https://manaba.tsukuba.ac.jp/*"],
       "run_at": "document_end",
-      "js": [
-        "manaba.js"
-      ]
+      "js": ["manaba.js"]
     },
     {
-      "matches": [
-        "https://www.tulips.tsukuba.ac.jp/search/*"
-      ],
+      "matches": ["https://www.tulips.tsukuba.ac.jp/search/*"],
       "run_at": "document_end",
-      "js": [
-        "tulips.js"
-      ]
+      "js": ["tulips.js"]
     },
     {
-      "matches": [
-        "https://twins.tsukuba.ac.jp/*"
-      ],
+      "matches": ["https://twins.tsukuba.ac.jp/*"],
       "run_at": "document_end",
-      "js": [
-        "twins.js"
-      ]
+      "js": ["twins.js"]
     },
     {
-      "matches": [
-        "https://www.nicovideo.jp/*"
-      ],
+      "matches": ["https://www.nicovideo.jp/*"],
       "run_at": "document_start",
-      "js": [
-        "niconico.js"
-      ]
+      "js": ["niconico.js"]
     },
     {
-      "matches": [
-        "https://app.getmoneytree.com/*"
-      ],
+      "matches": ["https://app.getmoneytree.com/*"],
       "run_at": "document_end",
-      "js": [
-        "moneytree.js"
-      ]
+      "js": ["moneytree.js"]
     },
     {
-      "matches": [
-        "https://www.kurashiru.com/recipes/*"
-      ],
+      "matches": ["https://www.kurashiru.com/recipes/*"],
       "run_at": "document_end",
-      "js": [
-        "kurashiru.js"
-      ]
+      "js": ["kurashiru.js"]
     },
     {
-      "matches": [
-        "https://scrapbox.io/*"
-      ],
+      "matches": ["https://scrapbox.io/*"],
       "run_at": "document_end",
-      "js": [
-        "scrapbox.js"
-      ]
+      "js": ["scrapbox.js"]
     },
     {
-      "matches": [
-        "https://app.slack.com/*"
-      ],
+      "matches": ["https://app.slack.com/*"],
       "run_at": "document_end",
-      "js": [
-        "slack.js"
-      ]
+      "js": ["slack.js"]
     }
   ],
-  "web_accessible_resources": [
-    "style/tazugane.css"
-  ]
+  "web_accessible_resources": ["style/tazugane.css"]
 }

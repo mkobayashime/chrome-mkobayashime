@@ -1,5 +1,5 @@
 *:not(i) {
-  font-family: 'Tazugane Gothic StdN' !important;
+  font-family: "Tazugane Gothic StdN" !important;
 }
 
 pre *,
@@ -7,11 +7,11 @@ pre,
 code:not(.fa),
 .code,
 .code * {
-  font-family: 'Space Mono', 'Tazugane Gothic StdN' !important;
+  font-family: "Space Mono", "Tazugane Gothic StdN" !important;
   font-variant-ligatures: none;
 }
 
 .material-icons,
 .material-icons * {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
 }
