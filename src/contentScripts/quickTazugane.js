@@ -1,7 +1,7 @@
 "use strict"
 
 document.onkeyup = (e) => {
-  if (e.altKey && e.key === "k") {
+  if (e.altKey && e.code === "KeyK") {
     const styleTag = document.createElement("link")
     styleTag.rel = "stylesheet"
     styleTag.type = "text/css"
