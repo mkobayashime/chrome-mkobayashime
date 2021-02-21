@@ -20,15 +20,5 @@ module.exports = {
   rules: {
     eqeqeq: "error",
     "no-console": "warn",
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "lf",
-        semi: false,
-        singleQuote: false,
-        tabWidth: 2,
-        trailingComma: "es5",
-      },
-    ],
   },
 }
