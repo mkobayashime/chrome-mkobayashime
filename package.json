@@ -1,6 +1,6 @@
 {
   "name": "chrome-mkobayashime",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Made for personal use. Use at your own risk.",
   "private": true,
   "devDependencies": {
