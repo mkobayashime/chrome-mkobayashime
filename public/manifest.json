@@ -64,6 +64,11 @@
       "js": ["scrapbox.js"]
     },
     {
+      "matches": ["https://secure.freee.co.jp/*"],
+      "run_at": "document_end",
+      "js": ["freee.js"]
+    },
+    {
       "matches": ["https://app.slack.com/*"],
       "run_at": "document_end",
       "js": ["slack.js"]
