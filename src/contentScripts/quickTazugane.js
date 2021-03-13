@@ -2,11 +2,18 @@
 
 document.onkeyup = (e) => {
   if (e.altKey && e.code === "KeyK") {
-    const styleTag = document.createElement("link")
-    styleTag.rel = "stylesheet"
-    styleTag.type = "text/css"
-    styleTag.href = chrome.runtime.getURL("/style/tazugane.css")
+    const styleTag = document.getElementById("quick-tazugane")
+    if (styleTag) {
+      styleTag.remove()
+      return
+    }
 
-    document.head.appendChild(styleTag)
+    const newStyleTag = document.createElement("link")
+    newStyleTag.id = "quick-tazugane"
+    newStyleTag.rel = "stylesheet"
+    newStyleTag.type = "text/css"
+    newStyleTag.href = chrome.runtime.getURL("/style/tazugane.css")
+
+    document.head.appendChild(newStyleTag)
   }
 }
