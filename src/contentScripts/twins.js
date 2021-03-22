@@ -1,11 +1,5 @@
 "use strict"
 
-const url = window.location.href
-
-if (url.indexOf("&tabId=kj") === url.length - 9) {
-  setKeijiShortcuts()
-}
-
 const setKeijiShortcuts = () => {
   window.onkeyup = (e) => {
     if (e.ctrlKey && e.code === "Enter") {
@@ -27,4 +21,10 @@ const setKeijiShortcuts = () => {
       }
     }
   }
+}
+
+const searchParams = new URLSearchParams(window.location.search)
+
+if (searchParams.get("tabId") === "kj") {
+  setKeijiShortcuts()
 }
