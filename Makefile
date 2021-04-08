@@ -2,10 +2,10 @@ install:
 	yarn
 
 dev: install
-	yarn webpack --mode=development --watch --config config/webpack.dev.js
+	ENV_DEV=true yarn webpack --watch
 
 build: install clear
-	yarn webpack --mode=production --config config/webpack.prod.js
+	yarn webpack
 
 clear: install
 	yarn rimraf build

@@ -6,6 +6,11 @@ const glob = require("glob")
 const SizePlugin = require("size-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ZipPlugin = require("zip-webpack-plugin")
+
+const isDev = Boolean(process.env.ENV_DEV)
+
+const version = require("./package.json").version
 
 const entries = glob
   .sync("./src/@(contentScripts|background)/*.js")
@@ -15,9 +20,10 @@ const entries = glob
     return acc
   }, {})
 
-const common = {
+module.exports = {
+  mode: isDev ? "development" : "production",
   output: {
-    path: path.resolve(__dirname, "../build"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].js",
   },
   entry: entries,
@@ -26,14 +32,13 @@ const common = {
     errors: true,
     builtAt: true,
   },
+  devtool: isDev ? "source-map" : false,
   module: {
     rules: [
-      // Help webpack in understanding CSS files imported in .js files
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
-      // Check for images imported in .js files and
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -49,20 +54,23 @@ const common = {
     ],
   },
   plugins: [
-    // Print file sizes
     new SizePlugin(),
-    // Copy static assets from `public` folder to `build` folder
     new CopyWebpackPlugin([
       {
         from: "**/*",
         context: "public",
       },
     ]),
-    // Extract CSS into separate files
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    ...(isDev
+      ? []
+      : [
+          new ZipPlugin({
+            path: path.resolve(__dirname, "build"),
+            filename: `${version}`,
+          }),
+        ]),
   ],
 }
-
-module.exports = common
