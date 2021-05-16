@@ -59,11 +59,6 @@
       "js": ["kurashiru.js"]
     },
     {
-      "matches": ["https://scrapbox.io/*"],
-      "run_at": "document_end",
-      "js": ["scrapbox.js"]
-    },
-    {
       "matches": ["https://secure.freee.co.jp/*"],
       "run_at": "document_end",
       "js": ["freee.js"]
